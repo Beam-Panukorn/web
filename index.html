@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JonesDashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+</head>
+<body>
+  <header>
+    <h1>JonesDashboard</h1>
+    <p>Monitoring red and green zones in Northern Thailand</p>
+  </header>
+
+  <div class="toggle-buttons">
+    <button id="redBtn" class="active">Red Zone</button>
+    <button id="greenBtn">Green Zone</button>
+  </div>
+
+  <div class="alert-box" id="alertBox">
+    <button class="alert-toggle-btn" onclick="toggleAlert()">Show Alert</button>
+    <div class="alert-content hidden" id="alertContent"></div>
+  </div>
+
+  <div class="map-section">
+    <h2>Risk Map</h2>
+    <div id="map"></div>
+  </div>
+
+  <div class="info-section">
+    <h2>Province Data</h2>
+    <div class="card-container" id="provinceData">
+      <!-- ข้อมูลจังหวัดจะแสดงที่นี่ -->
+    </div>
+  </div>
+
+  <div class="charts-section">
+    <h2>Trend Graphs</h2>
+    <div class="chart-row">
+      <canvas id="temperatureChart"></canvas>
+      <canvas id="humidityChart"></canvas>
+      <canvas id="hotspotChart"></canvas>
+    </div>
+  </div>
+
+  <div class="green-zone">
+    <h2>Green Zone</h2>
+    <p>ข้อมูลและรายละเอียดของพื้นที่สีเขียว</p>
+  </div>
+  
+  <div class="red-zone">
+    <h2>Red Zone</h2>
+    <p>ข้อมูลและรายละเอียดของพื้นที่สีแดง</p>
+  </div>
+  
+
+  <footer>
+    <p>Forest Monitoring System © 2025</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
